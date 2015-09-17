@@ -10,6 +10,9 @@ import "fmt"
 /*Panic function will cause a run time error*/
 
 /*Recover function can handle a run-time panic*/
+
+/*To recover a run-time panic, we should pair the recover with defer. If not, 
+  the recover will never happen.*/
 func main() {
 	defer func() {
 		str := recover()
